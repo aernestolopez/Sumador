@@ -108,8 +108,12 @@ public void dividir(View view){
         et1.setText("0");
         int n1=Integer.parseInt(et1.getText().toString());
         int n2=Integer.parseInt(et2.getText().toString());
-        int dividir=n1/n2;
-        tv1.setText(""+dividir);
+        if(n2==0){
+            tv1.setText("No se puede dividir");
+        }else{
+            int dividir=n1/n2;
+            tv1.setText(""+dividir);
+        }
     }
     else {
         int n1=Integer.parseInt(et1.getText().toString());
