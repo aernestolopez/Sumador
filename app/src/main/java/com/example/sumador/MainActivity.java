@@ -121,6 +121,8 @@ public void dividir(View view){
         if(n2!=0){
             int dividir=n1/n2;
             tv1.setText(""+dividir);
+        }if(n2==0){
+            tv1.setText("No se puede dividir");
         }
     }
 }
