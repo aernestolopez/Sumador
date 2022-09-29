@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         //Creamos unas condiciones para que si el usuario no introduce un numero la aplicacion no deje de funcionar
         //y el resultado que arroje sea 0 en el caso que en las dos cajas para añadir numeros y en el caso en la que
         //solo haya una caja con un numero arroje como resultado ese numero
-        if (et1.getText().toString().isEmpty() && et2.getText().toString().isEmpty()){
+        if (et1.getText().toString().isEmpty() & et2.getText().toString().isEmpty()){
             et1.setText("0");
             et2.setText("0");
         }
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public void restar(View view){
         //Creamos unas condiciones para que si el usuario no introduce un numero en las cajas de texto nosotros initroducimos
         //el numero 0
-        if (et1.getText().toString().isEmpty() && et2.getText().toString().isEmpty()){
+        if (et1.getText().toString().isEmpty() & et2.getText().toString().isEmpty()){
             et1.setText("0");
             et2.setText("0");
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void multiplicar(View view){
-        if (et1.getText().toString().isEmpty() && et2.getText().toString().isEmpty()){
+        if (et1.getText().toString().isEmpty() & et2.getText().toString().isEmpty()){
             et1.setText("0");
             et2.setText("0");
         }
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 public void dividir(View view){
-    if (et1.getText().toString().isEmpty() && et2.getText().toString().isEmpty()){
+    if (et1.getText().toString().isEmpty() & et2.getText().toString().isEmpty()){
         et1.setText("0");
         et2.setText("0");
         tv1.setText("No se puede dividir");
@@ -114,10 +114,15 @@ public void dividir(View view){
 
     }
     else {
-       /* int n1=Integer.parseInt(et1.getText().toString());
+        int n1=Integer.parseInt(et1.getText().toString());
         int n2=Integer.parseInt(et2.getText().toString());
-        int dividir=n1/n2;
-        tv1.setText(""+dividir);**/
+        if(n2!=0){
+            int dividir=n1/n2;
+            tv1.setText(""+dividir);
+        }else{
+            tv1.setText("No se puede dividir");
+        }
+
 
     }
 
