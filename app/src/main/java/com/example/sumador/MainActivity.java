@@ -26,12 +26,7 @@ public class MainActivity extends AppCompatActivity {
     public void sumar(View view) {
 
         //Creamos unas condiciones para que si el usuario no introduce un numero la aplicacion no deje de funcionar
-        //y el resultado que arroje sea 0 en el caso que en las dos cajas para añadir numeros y en el caso en la que
-        //solo haya una caja con un numero arroje como resultado ese numero
-        if (et1.getText().toString().isEmpty() & et2.getText().toString().isEmpty()){
-            et1.setText("0");
-            et2.setText("0");
-        }
+        //para esto se pondrán 0 como los numeros para las operaciones
         if(et1.getText().toString().isEmpty()){
             et1.setText("0");
 
@@ -52,11 +47,6 @@ public class MainActivity extends AppCompatActivity {
     public void restar(View view){
         //Creamos unas condiciones para que si el usuario no introduce un numero en las cajas de texto nosotros initroducimos
         //el numero 0
-        if (et1.getText().toString().isEmpty() & et2.getText().toString().isEmpty()){
-            et1.setText("0");
-            et2.setText("0");
-
-        }
         if(et1.getText().toString().isEmpty()){
             et1.setText("0");
 
@@ -74,10 +64,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void multiplicar(View view){
-        if (et1.getText().toString().isEmpty() & et2.getText().toString().isEmpty()){
-            et1.setText("0");
-            et2.setText("0");
-        }
         if(et1.getText().toString().isEmpty()){
             et1.setText("0");
 
