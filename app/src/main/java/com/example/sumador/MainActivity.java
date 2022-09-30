@@ -24,22 +24,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sumar(View view) {
-
         //Creamos unas condiciones para que si el usuario no introduce un numero la aplicacion no deje de funcionar
         //para esto se pondrán 0 como los numeros para las operaciones
         if(et1.getText().toString().isEmpty()){
             et1.setText("0");
-
         }if(et2.getText().toString().isEmpty()){
             et2.setText("0");
         }
         // Obtenemos los números
         int n1=Integer.parseInt(et1.getText().toString());
         int n2=Integer.parseInt(et2.getText().toString());
-
         // Hacemos la suma
         int suma=n1+n2;
-
         // Establecemos el resultado en el TextView
         tv1.setText(""+suma);
     }
@@ -49,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         //el numero 0
         if(et1.getText().toString().isEmpty()){
             et1.setText("0");
-
         }if(et2.getText().toString().isEmpty()){
             et2.setText("0");
         }
@@ -58,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         int n2=Integer.parseInt(et2.getText().toString());
         // Hacemos la resta
         int resta=n1-n2;
-
         // Establecemos el resultado en el TextView
         tv1.setText(""+resta);
     }
@@ -66,16 +60,12 @@ public class MainActivity extends AppCompatActivity {
     public void multiplicar(View view){
         if(et1.getText().toString().isEmpty()){
             et1.setText("0");
-
         }if(et2.getText().toString().isEmpty()){
             et2.setText("0");
         }
-
         int n1=Integer.parseInt(et1.getText().toString());
         int n2=Integer.parseInt(et2.getText().toString());
-
         int multiplicacion=n1*n2;
-
         tv1.setText(""+multiplicacion);
 
     }
