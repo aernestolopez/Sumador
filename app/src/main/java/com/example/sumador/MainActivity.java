@@ -95,36 +95,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 public void dividir(View view){
-    if (et1.getText().toString().isEmpty() & et2.getText().toString().isEmpty()){
-        et1.setText("0");
-        et2.setText("0");
-        tv1.setText("No se puede dividir");
-    }
+        //Se comprueba que el usuario haya pasado parametros en caso negativo se ponen 0
     if(et2.getText().toString().isEmpty()){
         et2.setText("0");
-        tv1.setText("No se puede dividir");
-
     }if(et1.getText().toString().isEmpty()){
         et1.setText("0");
-        int n1=Integer.parseInt(et1.getText().toString());
-        int n2=Integer.parseInt(et2.getText().toString());
-        if(n2==0){
-            tv1.setText("No se puede dividir");
-        }else{
-            int dividir=n1/n2;
-            tv1.setText(""+dividir);
-        }
     }
-    else {
         int n1=Integer.parseInt(et1.getText().toString());
         int n2=Integer.parseInt(et2.getText().toString());
+        //se comprueba que el parametro divisor no sea 0, en caso afirmativo se le hace saber al usuario que no se puede dividir
         if(n2!=0){
             int dividir=n1/n2;
             tv1.setText(""+dividir);
         }if(n2==0){
             tv1.setText("No se puede dividir");
         }
-    }
 }
 
 }
